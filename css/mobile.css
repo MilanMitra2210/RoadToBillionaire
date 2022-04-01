@@ -1,11 +1,4 @@
-.heading {
-  height: 2.5em;
-  width: 100%;
-  font-size: 2em;
-  font-weight: bold;
-  background-color: #e9efff;
-  text-align: center;
-}
+
 ul {
   list-style-type: none;
   display: flex;

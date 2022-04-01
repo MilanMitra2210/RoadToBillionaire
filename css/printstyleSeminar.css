@@ -1,0 +1,49 @@
+
+.heading{
+    background-color: white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+    border-bottom: 2px solid white;
+}
+
+.table{
+    position: relative; 
+    margin-top: 0;
+}
+.Column_Heading{
+    background-color: white;
+    color: black;
+    padding: 1em;
+}
+.Row_Heading{
+    background-color: white;
+    color: black;
+    padding: 0.8em;
+}
+.dust_background{
+    text-align: center;
+    background-image: none;
+    background-repeat: repeat-x;
+}
+.hiking{
+    background-color: white;
+}
+.Beginner_Cycling{
+    background-color: white;
+}
+.camping{
+    background-color: white;
+}
+.cycling{
+    background-color: white;
+}
+.two{
+    width: 1em;
+}
+.table_right{
+    display: flex;
+    justify-content: right;
+}

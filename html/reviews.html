@@ -5,41 +5,478 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/mobile.css" />
-    <link rel="stylesheet" href="../css/adventurestyles.css">
+    <link rel="stylesheet" href="../css/adventurestyles.css" />
+
     <title>Outdoor Adventure Reviews</title>
+
+    <style id="style">
+      .forum_container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .forum_block {
+        color: white;
+        position: absolute;
+        width: 80%;
+        /* height: 44rem; */
+        background-color: #40538c;
+      }
+
+      .box {
+        position: relative;
+        border: 2px solid white;
+        margin: 40px;
+        /* height: 16rem; */
+      }
+
+      .box_text {
+        position: relative;
+        color: white;
+        background-color: #40538c;
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        font-size: 28px;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .box_content {
+        padding: 10px;
+        padding-top: 20px;
+      }
+
+      .box_content p {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .stars {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .star img {
+        padding-right: 2px;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      #intrest label {
+        display: block;
+      }
+
+      .info {
+        padding: 18px;
+        display: flex;
+      }
+
+      .right {
+        padding-top: 0px;
+        padding-left: 10px;
+      }
+      .right input {
+        display: block;
+        padding-bottom: 5px;
+        background-color: #ffffe6;
+      }
+      .left p {
+        margin: 0px;
+        padding-bottom: 5px;
+        text-align: right;
+      }
+
+      .buttons {
+        position: relative;
+        margin: 40px;
+      }
+      .buttons button {
+        background-color: #ffffe6;
+      }
+		table{
+			margin-left: 20%;
+			font-family: Arial, sans-serif;
+		}
+		td.top{
+			text-align:center;
+			background-color:#CCCCCC;
+		}
+		td.meat{
+			background-color:#FFFFFF;
+			width:50%;
+		}
+    .post{
+      position: relative;
+      bottom: -65em;
+    }
+    </style>
+    <link rel="stylesheet" href="" />
   </head>
   <body>
-    <div class="heading">Outdoor adventure Trip Seminars <br> 2020/2021</div>
+    <div class="heading" id="heading">
+      Outdoor adventure Trip Seminars <br />
+      2020/2021
+    </div>
     <nav>
-      <div class="navBar" id="">
-        <ul  >
-          <li  >
-            <a   href="#">About us</a>
+      <div class="navBar" id="navBar">
+        <ul>
+          <li>
+            <a href="#">About us</a>
           </li>
-          <li  >
-            <a   href="#">Travel</a>
+          <li>
+            <a href="#">Travel</a>
           </li>
-          <li  >
-            <a   href="#">Photos</a>
+          <li>
+            <a href="#">Photos</a>
           </li>
-          <li  >
-            <a   href="#">Shop</a>
+          <li>
+            <a href="#">Shop</a>
           </li>
-          <li  >
-            <a   href="#">Reviews</a>
+          <li>
+            <a href="../html/reviews.html">Reviews</a>
           </li>
-          <li  >
-            <a   href="#">Seminars</a>
+          <li>
+            <a href="../html/seminars.html">Seminars</a>
           </li>
-          <li  >
-            <a   href="#">Events</a>
+          <li>
+            <a href="#">Events</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <footer>
-      <img src="../Lab+5+images/outdooradventurehorizontal.png" alt="" >
+    <div class="forum_container">
+      <div class="forum_block">
+        <form
+          action="https://csunix.mohawkcollege.ca/tooltime/showit.pl"
+          method="POST"
+          id="form"
+        >
+          <input
+            type="hidden"
+            id="formname"
+            name="formname"
+            value="Trip Review"
+          />
+          <div class="box">
+            <div class="box_text">Trip Reviews</div>
+            <div class="box_content">
+              <select name="Trip">
+                <option value="Alberta Rural">Alberta Rural</option>
+                <option value="PEI" selected>PEI</option>
+                <option value="B.C. Coast">B.C. Coast</option>
+                <option value="Ontario Lake Superior">
+                  Ontario Lake Superior
+                </option>
+                <option value="Nova Scotia Cabot Trail">
+                  Nova Scotia Cabot Trail
+                </option>
+              </select>
+
+              <select name="Duration">
+                <option value="5d" selected>5 Days</option>
+                <option value="7d">7 Days</option>
+                <option value="10d">10 Days</option>
+                <option value="14d">14 Days</option>
+              </select>
+
+              <p>Your Rating:</p>
+
+              <div class="stars">
+                <label for="4star">
+                  <input type="radio" id="4star" name="rating" value="4" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                </label>
+              </div>
+
+              <div class="stars">
+                <label for="3star">
+                  <input type="radio" id="3star" name="rating" value="3" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                </label>
+              </div>
+
+              <div class="stars">
+                <label for="2star">
+                  <input type="radio" id="2star" name="rating" value="2" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                </label>
+              </div>
+
+              <div class="stars">
+                <label for="1star">
+                  <input type="radio" id="1star" name="rating" value="1" />
+                  <img src="../Lab+5+images/wheel_sm.jpg" />
+                </label>
+              </div>
+
+              <p>Comments :</p>
+              <div class="comment">
+                <textarea name="comment" cols="65" rows="7"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box_text">
+              I would be intrested in these trips : (check all that apply)
+            </div>
+            <div class="box_content" id="intrest">
+              <label>
+                <input
+                  type="checkbox"
+                  name="intrested"
+                  value="Sea or Lake Coast"
+                />
+                Sea or Lake Coast
+              </label>
+              <label>
+                <input type="checkbox" name="intrested" value="Rural" /> Rural
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="intrested"
+                  value="Mountains"
+                  checked
+                />
+                Mountains
+              </label>
+
+              <label>
+                <input type="checkbox" name="intrested" value="Other" /> Others
+                (please specify)
+                <input type="text" name="intrested" id="othr"/>
+              </label>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box_text">About You (Optional)</div>
+
+            <div class="box_content">
+              <p>
+                I usually prefer to trips this time of year (Select all that
+                apply):
+              </p>
+              <select name="pref" multiple>
+                <option value="Winter">Winter</option>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+              </select>
+
+              <div class="info">
+                <div class="left">
+                  <p>First Name</p>
+                  <p>Last Name</p>
+                  <p>Phone Number</p>
+                  <p>Emain Address</p>
+                </div>
+
+                <div class="right">
+                  <input
+                    type="text"
+                    name="Firstname"
+                    id="fname"
+                    size="20"
+                    onchange="inputchange()"
+                  />
+                  <input
+                    type="text"
+                    name="Lastname"
+                    id="lname"
+                    onchange="inputchange()"
+                    size="20"
+                  />
+                  <input
+                    id="temp"
+                    type="number"
+                    name="Phone"
+                    size="12"
+                    placeholder="123-456-7890"
+                  />
+                  <input
+                    id="temp"
+                    type="email"
+                    name="emailaddress"
+                    size="40"
+                    placeholder="name@example.com"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button id="submit" type="submit">Send Review</button>
+            <button id="cancel" type="reset">Cancel</button>
+            <button id="printbtn" type="button" onclick="print()">Print</button>
+            <button type="button" id="backbtn" onclick="back()" hidden>
+              Back
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="post">
+      <table border="1px" width="50%" name="postTable" id="ttbl">
+      
+     </table>
+    </div>
+
+    <footer class="footer" id="footer" style="margin-top: 70%">
+      <img src="../Lab+5+images/outdooradventurehorizontal.png" alt="" />
     </footer>
+
+    <script>
+      var Days = ['' ,'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' , 'Saturday' + 'Sunday' ];
+      var Month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      setInterval(() => {
+        var date = new Date();
+        
+        var inoar = document.getElementsByTagName("input");
+        var selar = document.getElementsByTagName("select");
+        var x = document.getElementById('ttbl'); 
+        x.innerHTML = '<tr><td class="top" colspan="2">' + document.getElementById('fname').value + ' '+ document.getElementById('lname').value + ' Trip Review</td></tr>'+
+        '<tr><td class="top" colspan="2">Date Received: '+ Days[date.getDay()] +' , ' +Month[date.getMonth()]+ ' ' + date.getDate() + ' , '+ date.getFullYear() + ' at ' + date.getHours()+':'+ date.getMinutes()+ ':'+ date.getSeconds() + '<br />Posted by: 103.76.136.146</td></tr>'+
+        '<tr><td class="top">NAME</td> <td class="top">VALUE(S)</td></tr>';
+        var temp = [];
+        for(var i=1;i<inoar.length;i++)
+        {
+          var val = inoar[i].value;
+          var name = inoar[i].name;
+
+          if(name == "rating" && inoar[i].checked == true)
+           x.innerHTML +='<tr valign="top"><td class="meat">'+ name + '</td><td class="meat">'+val+'</td></tr>';
+          if(name == "Firstname" && val != '')
+          x.innerHTML += '<tr valign="top"><td class="meat">'+ name + '</td><td class="meat">'+val+'</td></tr>';
+          if(name == "Lastname" && val != '')
+          x.innerHTML += '<tr valign="top"><td class="meat">'+ name + '</td><td class="meat">'+val+'</td></tr>';
+          if(name == "emailaddress" && val != '')
+          x.innerHTML += '<tr valign="top"><td class="meat">'+ name + '</td><td class="meat">'+val+'</td></tr>';
+          if(name == "Phone" && val != '')
+          x.innerHTML += '<tr valign="top"><td class="meat">'+ name + '</td><td class="meat">'+val+'</td></tr>';
+        }
+
+        var checkbx = document.getElementsByName('intrested');
+      
+        for(var i=0;i<checkbx.length-1;i++)
+        {
+          if(checkbx[i].checked == false)
+          continue;
+          temp.push(checkbx[i].value);
+
+        }
+        if(temp.length > 0)
+        {
+          if(document.getElementById('othr').value != '')
+          temp.push(document.getElementById('othr').value);
+          temp.join(",");
+          x.innerHTML += '<tr valign="top"><td class="meat">intrested'+  '</td><td class="meat">'+temp+'</td></tr>';}
+
+        for(var i = 0 ;i< selar.length;i++)
+        {
+          var val;
+          var name = selar[i].name;
+          // console.log(name);
+          if(name == "Trip" || name == "Duration")
+          {
+            val = selar[i].options[selar[i].selectedIndex].value;
+            x.innerHTML +='<tr valign="top"><td class="meat">'+ name + '</td><td class="meat">'+val+'</td></tr>';
+          }
+          if(name == "pref")
+          {
+            var temp = '';
+            for ( var j = 0; j < selar[i].selectedOptions.length; j++) {
+            if(j == selar[i].selectedOptions.length-1)
+            temp += selar[i].selectedOptions[j].value ;
+            else
+            temp += selar[i].selectedOptions[j].value + ',';
+            }
+            if(temp != '')
+            x.innerHTML += '<tr valign="top"><td class="meat">'+ name +'</td><td class="meat">'+temp+'</td></tr>';
+          }
+
+        }
+
+        name = document.getElementsByTagName('textarea')[0].name;
+        val = document.getElementsByTagName('textarea')[0].value;
+        if(val != '')
+        x.innerHTML += '<tr valign="top"><td class="meat">'+ name + '</td><td class="meat">'+val+'</td></tr>'
+
+
+      }, 6000);
+   
+
+     
+
+      function disable(ar) {
+        for (i = 0; i < ar.length; i++) {
+          ar[i].disabled = true;
+        }
+      }
+      function enable(ar) {
+        for (i = 0; i < ar.length; i++) {
+          ar[i].disabled = false;
+        }
+      }
+
+      function print() {
+        var x = document.getElementsByTagName("link")[2];
+        if (x.getAttribute("href") == "") {
+          x.setAttribute("href", "../css/printstyle.css");
+
+          disable(document.getElementsByTagName("select"));
+          disable(document.getElementsByTagName("input"));
+          disable(document.getElementsByTagName("textarea"));
+
+          document.getElementById("heading").style.display = "none";
+          document.getElementById("navBar").style.display = "none";
+          document.getElementById("footer").style.display = "none";
+          document.getElementById("backbtn").hidden = false;
+          document.getElementById("printbtn").hidden = true;
+          document.getElementById("submit").hidden = true;
+          document.getElementById("cancel").hidden = true;
+        }
+      }
+
+      function back() {
+        var x = document.getElementsByTagName("link")[2];
+        if (x.getAttribute("href") == "../css/printstyle.css") {
+          x.setAttribute("href", "");
+
+          enable(document.getElementsByTagName("select"));
+          enable(document.getElementsByTagName("input"));
+          enable(document.getElementsByTagName("textarea"));
+
+          document.getElementById("heading").style.display = "block";
+          document.getElementById("navBar").style.display = "block";
+          document.getElementById("footer").style.display = "block";
+          document.getElementById("backbtn").hidden = true;
+          document.getElementById("printbtn").hidden = false;
+          document.getElementById("submit").hidden = false;
+          document.getElementById("cancel").hidden = false;
+        }
+      }
+      function inputchange() {
+        let x = document.getElementById("fname");
+        let y = document.getElementById("formname");
+        let z = document.getElementById("lname");
+        y.value = x.value + " " + z.value + " Trip Review";
+        console.log(y.value);
+      }
+    </script>
   </body>
 </html>
