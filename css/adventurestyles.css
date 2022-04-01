@@ -1,0 +1,15 @@
+.heading {
+    height: 2.5em;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #e9efff;
+    text-align: center;
+  }
+.footer {
+  text-align: center;
+  /* margin-top: 100%; */
+  bottom: 0;
+  width: 100%;
+
+}

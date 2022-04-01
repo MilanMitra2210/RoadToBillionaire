@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="stylesheet" href="../css/adventurestyles.css" />
+    <title>Outdoor Adventure Seminars</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1em;
+        border-bottom: 2px solid black;
+      }
+
+      .table {
+        position: relative;
+        border: 2px solid white;
+        margin-top: 0;
+      }
+      .Column_Heading {
+        background-color: #002759;
+        color: white;
+        padding: 1em;
+      }
+      .Row_Heading {
+        background-color: #ddeeff;
+        color: black;
+        padding: 0.8em;
+      }
+      .dust_background {
+        text-align: center;
+        background-image: url("../Lab+5+images/dust.jpg");
+        background-repeat: repeat-x;
+      }
+      .hiking {
+        background-color: #99ee8a;
+      }
+      .Beginner_Cycling {
+        background-color: #9262af;
+      }
+      .camping {
+        background-color: #f9f871;
+      }
+      .cycling {
+        background-color: #00a5d6;
+      }
+      .two {
+        width: 1em;
+      }
+      .table_right {
+        display: flex;
+        justify-content: right;
+      }
+    </style>
+
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div class="heading" id="heading">
+      Outdoor adventure Trip Seminars <br />
+      2020/2021
+    </div>
+    <nav>
+      <div class="navBar" id="navBar">
+        <ul>
+          <li>
+            <a href="#">About us</a>
+          </li>
+          <li>
+            <a href="#">Travel</a>
+          </li>
+          <li>
+            <a href="#">Photos</a>
+          </li>
+          <li>
+            <a href="#">Shop</a>
+          </li>
+          <li>
+            <a href="../html/reviews.html">Reviews</a>
+          </li>
+          <li>
+            <a href="../html/seminars.html">Seminars</a>
+          </li>
+          <li>
+            <a href="#">Events</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="table">
+        <div>
+          Legend: <br />
+          <span class="Beginner_Cycling two">&nbsp;&nbsp;&nbsp;</span>Beginner
+          Cycling <span class="cycling two">&nbsp;&nbsp;&nbsp;</span>Long
+          Distance Cycling
+          <span class="hiking two"> &nbsp;&nbsp;&nbsp;</span>Hiking
+          <span class="camping two">&nbsp;&nbsp;&nbsp;</span>Camping
+        </div>
+        <table border="1" cellspacing="0">
+          <tr>
+            <th class="Column_Heading">Day</th>
+            <th class="Column_Heading">7 am - 9 am</th>
+            <th class="Column_Heading">9 am - 11 am</th>
+            <th class="Column_Heading">11 am - 12 pm</th>
+            <th class="Column_Heading">12 pm - 2 pm</th>
+            <th class="Column_Heading">2 pm - 4 pm</th>
+            <th class="Column_Heading">6 pm - 8 pm</th>
+            <th class="Column_Heading">8 pm - 10 pm</th>
+          </tr>
+
+          <tr>
+            <th class="Row_Heading">Monday</th>
+            <td colspan="7" class="dust_background">Reserved for groups</td>
+          </tr>
+
+          <tr>
+            <th class="Row_Heading">Tuesday</th>
+            <td class="hiking">Hiking</td>
+            <td class="Beginner_Cycling">Beginner Cycling</td>
+            <td colspan="5" class="camping">Camping</td>
+          </tr>
+
+          <tr>
+            <th class="Row_Heading">Wednesday</th>
+            <td rowspan="2" class="cycling">
+              Long Distance <br />
+              Cycling Part 1
+            </td>
+            <td></td>
+            <td class="Beginner_Cycling">Beginner Cycling</td>
+            <td rowspan="2" class="camping">Camping in Asia</td>
+            <td rowspan="3" colspan="2" class="hiking">Hiking</td>
+            <td rowspan="2" class="cycling">
+              Long Distance <br />Cycling Part 1
+            </td>
+          </tr>
+
+          <tr>
+            <th class="Row_Heading">Thursday</th>
+            <td class="camping">Camping</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <th class="Row_Heading">Friday</th>
+            <td rowspan="4" class="camping">Camping in Europe</td>
+            <td colspan="2" class="Beginner_Cycling">Beginner Cycling</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <th class="Row_Heading">Saturday</th>
+            <td rowspan="2" colspan="3" class="hiking">Hiking</td>
+            <td class="Beginner_Cycling">Beginner Cycling</td>
+            <td colspan="2" rowspan="2" class="cycling">
+              Long Distance <br />
+              Cycling Part 1
+            </td>
+          </tr>
+
+          <tr>
+            <th class="Row_Heading">Sunday</th>
+            <td></td>
+          </tr>
+
+          <tr>
+            <th class="Row_Heading">Holidays</th>
+            <td colspan="2" class="cycling">
+              Long Distance <br />Cycling Part 1
+            </td>
+            <td colspan="4" class="dust_background">No Seminars</td>
+          </tr>
+        </table>
+        <div class="table_right">Schedule is Subject to change</div>
+        <button id="printbtn" type="button" onclick="print()">Print</button>
+        <button type="button" id="backbtn" onclick="back()" hidden>Back</button>
+      </div>
+    </div>
+
+    <footer class="footer" id="footer">
+      <img src="../Lab+5+images/outdooradventurehorizontal.png" alt="" />
+    </footer>
+    <script>
+      function print() {
+        var x = document.getElementsByTagName("link")[2];
+        if (x.getAttribute("href") == "") {
+          x.setAttribute("href", "../css/printstyleSeminar.css");
+
+          document.getElementById("navBar").style.display = "none";
+          document.getElementById("footer").style.display = "none";
+          document.getElementById("backbtn").hidden = false;
+          document.getElementById("printbtn").hidden = true;
+        }
+      }
+
+      function back() {
+        var x = document.getElementsByTagName("link")[2];
+        if (x.getAttribute("href") == "../css/printstyleSeminar.css") {
+          x.setAttribute("href", "");
+
+          document.getElementById("navBar").style.display = "block";
+          document.getElementById("footer").style.display = "block";
+          document.getElementById("backbtn").hidden = true;
+          document.getElementById("printbtn").hidden = false;
+
+        } 
+
+      }
+    </script>
+  </body>
+</html>
